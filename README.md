@@ -1,5 +1,5 @@
 # 🌐 Skill Exchange Platform
-Live Demo- (skill-swap-7815f0.netlify.app)
+Live Demo- https://skill-swap-7815f0.netlify.app/
 > **Software Engineering Mini Project**  
 > A responsive, frontend-only web application where users across all age groups can discover, share, and exchange technical and creative skills.
 
