@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Profile — SkillSwap</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/8c9b7d1d3b.js" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- NAV (same) -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top shadow-sm" style="background: linear-gradient(135deg, #007bff, #00bfff);">
+    <div class="container">
+      <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="index.html">
+        <a class="navbar-brand fw-bold text-white" href="index.html">SkillSwap</a>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav8">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav8">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link text-white fw-semibold" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link text-white fw-semibold" href="discover.html">Discover</a></li>
+          <li class="nav-item"><a class="nav-link text-white fw-semibold" href="collaboration.html">Collaboration</a></li>
+          
+          <li class="nav-item"><a class="nav-link text-white fw-semibold" href="community.html">Community</a></li>
+          <li class="nav-item"><a class="nav-link text-white fw-semibold" href="about.html">About</a></li>
+          <li class="nav-item ms-3"><a class="btn btn-light text-primary fw-semibold ms-2" href="login.html">Login</a></li>
+          <li class="nav-item"><a class="btn btn-light text-primary fw-semibold ms-2" href="register.html">Join Now</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="pt-6 pb-5">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-center mb-3">
+        <h2>Your Profile</h2>
+        <button id="logoutBtn" class="btn btn-outline-secondary btn btn-light text-primary fw-semibold ms-2">Logout</button>
+      </div>
+
+      <div class="row g-3">
+        <div class="col-md-4">
+          <div class="card p-3">
+            <div class="d-flex align-items-center gap-3">
+              <div class="avatar bg-primary text-white rounded-circle d-flex align-items-center justify-content-center" style="width:64px;height:64px;">A</div>
+              <div>
+                <h5 id="pfName">Name</h5>
+                <p id="pfEmail" class="small text-muted mb-0">Email</p>
+                <p class="small text-muted">Member since <span id="pfSince">—</span></p>
+              </div>
+            </div>
+
+            <hr>
+            <h6>Stats</h6>
+            <p class="small mb-0">Swaps requested: <span id="pfReq">0</span></p>
+            <p class="small">Swaps offered: <span id="pfOff">0</span></p>
+          </div>
+        </div>
+
+        <div class="col-md-8">
+          <div class="card p-3">
+            <h6>Skills You Offer</h6>
+            <div id="offerTags" class="d-flex gap-2 flex-wrap"></div>
+            <div class="input-group mt-3">
+              <input id="addOffer" class="form-control" placeholder="Add a skill you offer">
+              <button class="btn btn-primary" id="addOfferBtnPage">Add</button>
+            </div>
+
+            <hr>
+            <h6>Skills You Want</h6>
+            <div id="wantTags" class="d-flex gap-2 flex-wrap"></div>
+            <div class="input-group mt-3">
+              <input id="addWant" class="form-control" placeholder="Add a skill you want">
+              <button class="btn btn-primary" id="addWantBtnPage">Add</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+    <footer class="footer-section text-white py-4 mt-5">
+    <div class="container text-center">
+      <h5 class="fw-bold mb-2">SkillSwap</h5>
+      <p class="mb-3 small">Learn • Share • Collaborate • Grow</p>
+
+      <div class="d-flex justify-content-center gap-4 mb-3">
+        <a href="index.html" class="footer-link">Home</a>
+        <a href="discover.html" class="footer-link">Discover</a>
+        <a href="community.html" class="footer-link">Community</a>
+        <a href="about.html" class="footer-link">About</a>
+      </div>
+
+      <small class="opacity-75">© 2025 SkillSwap | Made with ❤️ by Students for Students</small>
+    </div>
+  </footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

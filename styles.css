@@ -1,0 +1,284 @@
+/* Global */
+:root{
+  --poppins: 'Poppins', sans-serif;
+  --primary-1: #0b5ed7;   /* deep blue */
+  --primary-2: #00c6fb;   /* cyan accent */
+  --accent: #ffd166;
+  --muted: #6c7a89;
+  --bg: #f7fbff;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  font-family:var(--poppins);
+  background: linear-gradient(180deg,#f7fbff 0%,#ffffff 40%);
+  color:#0b2238;
+  margin:0;
+  -webkit-font-smoothing:antialiased;
+}
+
+/* Brand mark (circle gradient) */
+.brand-mark{
+  display:inline-block;
+  width:36px;height:36px;border-radius:8px;
+  background:linear-gradient(135deg,var(--primary-1),var(--primary-2));
+  box-shadow:0 6px 18px rgba(11,94,215,0.18);
+}
+
+/* Navbar */
+.navbar{background:#fff}
+.navbar .accent{color:var(--accent)}
+.navbar .nav-link{color:#334155}
+.navbar .nav-link.active, .navbar .nav-link:hover{color:var(--primary-1)}
+
+/* Hero */
+.hero{
+  padding-top:120px;
+  padding-bottom:60px;
+  min-height:72vh;
+  background:linear-gradient(180deg, rgba(11,94,215,0.05), rgba(0,198,251,0.03));
+    background: url('skill-exchange-banner.jpg') center/cover no-repeat;
+}
+.hero .display-5{color:var(--primary-1)}
+.hero .btn-primary{
+  background:linear-gradient(90deg,var(--primary-1),var(--primary-2));
+  border:0;
+  box-shadow:0 10px 30px rgba(0,92,255,0.12);
+  border-radius:12px;
+  padding:12px 22px;
+}
+
+/* Hero stats card */
+.hero-stats { border-radius:12px; overflow:hidden; }
+
+/* Feature cards */
+.feature-card{
+  border-radius:12px;
+  background:white;
+  transition:transform .28s cubic-bezier(.2,.9,.2,1), box-shadow .28s;
+  border:1px solid rgba(10,20,40,0.03);
+}
+.feature-card:hover{
+  transform: translateY(-10px);
+  box-shadow:0 18px 40px rgba(7,28,64,0.08);
+}
+
+/* Icon circle */
+.icon-circle{
+  width:56px;height:56px;border-radius:12px;
+  background:linear-gradient(90deg,var(--primary-1),var(--primary-2));
+  color:white; display:flex;align-items:center;justify-content:center;font-size:20px;
+  box-shadow:0 8px 20px rgba(0,92,255,0.12);
+}
+
+/* Cards and levitation effect for profile/skill cards */
+.card {
+  border-radius:12px;
+  transition: transform .28s ease, box-shadow .28s ease;
+}
+.card:hover{
+  transform: translateY(-10px);
+  box-shadow:0 18px 40px rgba(7,28,64,0.08);
+}
+
+/* Profile / skill card styles (used in discover) */
+.skill-card{
+  border-radius:12px;
+  background:linear-gradient(180deg,#fff,#fbfdff);
+  border:1px solid rgba(10,20,40,0.03);
+  padding:16px;
+}
+
+/* tag chips */
+.tag{
+  padding:.35rem .6rem;border-radius:999px;background:linear-gradient(90deg,#eef8ff,#ffffff);border:1px solid rgba(0,92,255,0.06); color:var(--primary-1);font-weight:600;
+}
+
+/* Buttons */
+.btn-outline-primary{ border-radius:12px; padding:10px 18px; }
+.btn-primary{ border-radius:12px; padding:10px 18px; }
+
+/* forms */
+input.form-control, textarea.form-control, .form-select {
+  border-radius:10px; border:1px solid rgba(11,30,60,0.06);
+  padding:12px;
+}
+
+/* small utility */
+.pt-6{padding-top:96px}
+
+/* footer */
+footer{background:transparent}
+
+/* responsive tweaks */
+@media (max-width: 900px){
+  .hero { padding-top:90px; }
+  .brand-mark{width:34px;height:34px}
+}
+ 
+
+
+/* WHY CHOOSE SECTION */
+.feature-card {
+  background: linear-gradient(145deg, #ffffff, #f0f7ff);
+  border: 2px solid transparent;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 123, 255, 0.1);
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.feature-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  padding: 2px;
+  background: linear-gradient(135deg, #007bff, #00bfff, #6ec1ff);
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 12px 25px rgba(0, 123, 255, 0.2);
+}
+
+.feature-card:hover::before {
+  background: linear-gradient(135deg, #00bfff, #007bff);
+}
+
+./* WHY CHOOSE SECTION (with images) */
+.feature-card {
+  background: linear-gradient(145deg, #ffffff, #f0f7ff);
+  border-radius: 20px;
+  box-shadow: 0 6px 15px rgba(0, 123, 255, 0.1);
+  transition: all 0.4s ease;
+  overflow: hidden;
+  border: 1px solid rgba(0, 123, 255, 0.08);
+}
+
+.feature-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 12px 25px rgba(0, 123, 255, 0.2);
+  background: linear-gradient(145deg, #f8fbff, #ffffff);
+}
+
+.feature-img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  transition: transform 0.4s ease;
+}
+
+.feature-card:hover .feature-img {
+  transform: scale(1.05);
+}
+
+.why-choose h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #007bff;
+}
+
+.why-choose p {
+  font-size: 1rem;
+}
+/* DISCOVER PAGE STYLING */
+.user-card {
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(0, 123, 255, 0.1);
+  transition: all 0.4s ease;
+  border: 1px solid rgba(0, 123, 255, 0.08);
+}
+
+.user-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0, 123, 255, 0.2);
+}
+
+.user-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #00bfff;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.user-card:hover .user-img {
+  transform: scale(1.1);
+}
+
+.user-card h5 {
+  color: #007bff;
+}
+
+.user-card .btn {
+  border-radius: 25px;
+  transition: all 0.3s ease;
+}
+
+.user-card .btn:hover {
+  background: linear-gradient(90deg, #007bff, #00bfff);
+  color: white;
+  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
+}
+
+/* About Hero Section */
+.about-hero-section {
+  min-height: 60vh;
+  background: linear-gradient(135deg, #007bff, #00bfff);
+  padding-top: 120px;
+}
+
+/* About Section Cards */
+.about-card {
+  background: #ffffff;
+  transition: transform 0.3s, box-shadow 0.3s;
+  border: none;
+}
+
+.about-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.12);
+}
+
+.about-icon {
+  width: 65px;
+  height: 65px;
+}
+
+/* Journey Section */
+.journey-section {
+  background: linear-gradient(135deg, #0066ff, #0099ff);
+}
+
+/* Footer */
+.footer-section {
+  background: linear-gradient(135deg, #0056d8, #008cff);
+}
+
+.footer-section {
+  background: linear-gradient(135deg, #007bff, #00bfff);
+}
+
+.footer-link {
+  color: #ffffff;
+  text-decoration: none;
+  transition: 0.3s;
+  font-weight: 500;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+  opacity: 0.85;
+}

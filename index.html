@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SkillSwap — Home</title>
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/8c9b7d1d3b.js" crossorigin="anonymous"></script>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+ <!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top shadow-sm" style="background: linear-gradient(135deg, #007bff, #00bfff);">
+  <div class="container">
+    <a class="navbar-brand fw-bold text-white" href="index.html">SkillSwap</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link text-white fw-semibold" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link text-white fw-semibold" href="discover.html">Discover</a></li>
+        <!-- <li class="nav-item"><a class="nav-link text-white fw-semibold" href="collaborate.html">Collaborate</a></li> -->
+        <li class="nav-item"><a href="collaboration.html" class="nav-link text-white fw-semibold">Collaborate</a></li>
+        <li class="nav-item"><a class="nav-link text-white fw-semibold" href="community.html">Community</a></li>
+        <li class="nav-item"><a class="btn btn-light text-primary fw-semibold ms-2" href="register.html">Join Now</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO SECTION -->
+<header class="hero d-flex align-items-center text-white">
+    <div class="row align-items-center gy-4">
+      <div class="col-lg-7">
+        <h1 class="display-5 fw-bold animate__animated animate__fadeInLeft">Swap skills — learn together.</h1>
+        <p class="lead mb-4 text-white animate__animated animate__fadeInUp animate__delay-1s">
+          Create a profile, list skills you offer and skills you want, then connect and collaborate with peers.
+        </p>
+        <div class="d-flex gap-2 animate__animated animate__fadeInUp animate__delay-2s">
+          <a href="discover.html" class="btn btn-light btn-lg text-primary fw-semibold shadow-sm">Start Swapping</a>
+          <a href="register.html" class="btn btn-outline-light btn-lg fw-semibold">Join Community</a>
+        </div>
+      </div>
+     
+    </div>
+  </div>
+</header>
+
+<!-- SCROLL ANIMATION SECTION -->
+<section class="py-5 bg-light" id="about">
+  <div class="container text-center">
+    <h2 class="fw-bold mb-3 text-primary">Empower Your Journey</h2>
+    <p class="text-muted mb-5">SkillSwap connects learners and creators in a community built on collaboration, growth, and shared learning.</p>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card border-0 shadow-sm p-4 animate-on-scroll">
+          <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" class="mb-3" width="80">
+          <h5 class="fw-bold">Build Your Profile</h5>
+          <p class="text-muted">Showcase what you know and discover new skills through real-world collaboration.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card border-0 shadow-sm p-4 animate-on-scroll">
+          <img src="https://cdn-icons-png.flaticon.com/512/5996/5996827.png" class="mb-3" width="80">
+          <h5 class="fw-bold">Collaborate Seamlessly</h5>
+          <p class="text-muted">Find like-minded peers, share knowledge, and build impactful projects together.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card border-0 shadow-sm p-4 animate-on-scroll">
+          <img src="https://cdn-icons-png.flaticon.com/512/2103/2103658.png" class="mb-3" width="80">
+          <h5 class="fw-bold">Grow Your Network</h5>
+          <p class="text-muted">Connect with professionals and peers across domains to enhance your learning journey.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Floating & Scroll Animation CSS -->
+<style>
+  .floating-img {
+    animation: float 3s ease-in-out infinite;
+  }
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+  }
+
+  .animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+  }
+  .animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>
+
+<!-- Scroll Animation Script -->
+<script>
+  const elements = document.querySelectorAll('.animate-on-scroll');
+  window.addEventListener('scroll', () => {
+    elements.forEach(el => {
+      const rect = el.getBoundingClientRect().top;
+      if (rect < window.innerHeight - 100) {
+        el.classList.add('visible');
+      }
+    });
+  });
+</script>
+
+<!-- Animate.css link -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+
+ 
+<!-- WHY CHOOSE SKILLSWAP -->
+<section class="why-choose py-5" style="background: linear-gradient(180deg, #f8fbff 0%, #ffffff 100%);">
+  <div class="container text-center">
+    <h2 class="fw-bold mb-3 text-primary">Why Choose SkillSwap?</h2>
+    <p class="text-muted mb-5">A creative community built to help you learn, collaborate, and grow together.</p>
+
+    <div class="row g-4">
+      <!-- Feature 1 -->
+      <div class="col-md-4">
+        <div class="feature-card p-4 h-100">
+          <!-- <img src="https://cdn.dribbble.com/users/2113376/screenshots/14589284/media/5f5a8cda4bca53050d2c9947b93c8bb9.png?resize=400x300&vertical=center"  -->
+               <!-- alt="Global Community" class="feature-img mb-4"> -->
+          <h5 class="fw-bold mb-2 text-dark">Global Community</h5>
+          <p class="text-muted mb-0">Connect with learners, mentors, and creators from all around the world.</p>
+        </div>
+      </div>
+
+      <!-- Feature 2 -->
+      <div class="col-md-4">
+        <div class="feature-card p-4 h-100">
+          <!-- <img src="https://cdn.dribbble.com/users/22691/screenshots/14071010/media/7a381f6a67e295ef53d6ff1a2e086f1b.png?resize=400x300&vertical=center"  -->
+               <!-- alt="Project Collaboration" class="feature-img mb-4"> -->
+          <h5 class="fw-bold mb-2 text-dark">Collaborative Projects</h5>
+          <p class="text-muted mb-0">Work on exciting ideas with people who complement your skills perfectly.</p>
+        </div>
+      </div>
+
+      <!-- Feature 3 -->
+      <div class="col-md-4">
+        <div class="feature-card p-4 h-100">
+          <!-- <img src="https://cdn.dribbble.com/users/3292075/screenshots/15361433/media/da5d66eb978cb8b90a74d3c91e347528.png?resize=400x300&vertical=center"  -->
+               <!-- alt="Secure Platform" class="feature-img mb-4">  -->
+            <h5 class="fw-bold mb-2 text-dark">Safe & Trusted Platform</h5>
+          <p class="text-muted mb-0">Enjoy a secure environment where collaboration and creativity thrive safely.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- footer -->
+
+<!-- FOOTER -->
+<footer class="text-white pt-5 pb-4" style="background: linear-gradient(90deg, #0059ff, #00b7ff);">
+  <div class="container">
+    <div class="row gy-4">
+
+      <!-- Brand -->
+      <div class="col-lg-4 col-md-6">
+        <h3 class="fw-bold mb-3">SkillSwap</h3>
+        <p class="small">
+          Connect • Learn • Collaborate — A community where skills meet growth.
+        </p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="col-lg-2 col-md-6">
+        <h5 class="fw-semibold mb-3">Explore</h5>
+        <ul class="list-unstyled small">
+          <li><a href="index.html" class="text-white text-decoration-none hover:opacity-75">Home</a></li>
+          <li><a href="discover.html" class="text-white text-decoration-none hover:opacity-75">Discover</a></li>
+          <li><a href="community.html" class="text-white text-decoration-none hover:opacity-75">Community</a></li>
+          <li><a href="profile.html" class="text-white text-decoration-none hover:opacity-75">Profile</a></li>
+        </ul>
+      </div>
+
+      <!-- Support / Contact -->
+      <div class="col-lg-3 col-md-6">
+        <h5 class="fw-semibold mb-3">Support</h5>
+        <p class="small mb-1">📩 Email: support@skillswap.com</p>
+        <p class="small mb-1">📞 Hotline: +91 98765 43210</p>
+        <p class="small">🌍 We are here to help you learn & grow</p>
+      </div>
+
+      <!-- Call to Action -->
+      <div class="col-lg-3 col-md-6 text-center text-lg-end">
+        <h5 class="fw-semibold mb-3">Join Us Today</h5>
+        <a href="register.html" class="btn btn-light px-4 py-2 rounded-pill fw-semibold hover:bg-blue-600 hover:text-white">
+          Get Started
+        </a>
+      </div>
+
+    </div>
+
+    <hr class="border-light opacity-25 my-4">
+
+    <p class="text-center small opacity-75 mb-0">
+      © 2025 SkillSwap — Designed with ❤️ to empower learners.
+    </p>
+  </div>
+</footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
